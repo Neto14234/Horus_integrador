@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="cadastro">
+    <div class="container">
+        <div class="title">Cadastro</div>
+        <form action="/cadastro" method="POST">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Nome completo</span>
+                    <input name="nome_completo" type="text" placeholder="Coloque seu nome completo" required>
+                </div>
+                <div class="input-box">
+                        <span class="details">Nome de Usuário</span>
+                        <input name="nome_usuario" type="text" placeholder="Coloque seu nome" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">E-mail</span>
+                    <input name="email"type="text" placeholder="Coloque seu e-mail" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">CPF</span>
+                    <input name="cpf" type="text" placeholder="Coloque seu CPF" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Senha</span>
+                    <input name="password" type="password" placeholder="Coloque sua senha" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Confirmar senha</span>
+                    <input name="confirmar_senha" type="password" placeholder="Confirme sua senha" required>
+                </div>
+            </div>
+             <div class="gender-details">
+                <input type="radio" name="genero" id="dot-1">
+                <input type="radio" name="genero" id="dot-2">
+                <input type="radio" name="genero" id="dot-3">
+                <span class="gender-title">Gênero</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one">
+                        <span class="gender">Masculino</span>
+                        </span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two">
+                        <span class="gender">Feminino</span>
+                        </span>
+                    </label>
+                    <label for="dot-3">
+                        <span class="dot three">
+                        <span class="gender">Prefiro não dizer</span>
+                        </span>
+                    </label>
+                </div> 
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>
