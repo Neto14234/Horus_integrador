@@ -17,54 +17,34 @@
                     <input name="nome_completo" type="text" placeholder="Coloque seu nome completo" required>
                 </div>
                 <div class="input-box">
-                        <span class="details">Nome de Usuário</span>
-                        <input name="nome_usuario" type="text" placeholder="Coloque seu nome" required>
+                    <span class="details">CPF</span>
+                    <input name="cpf" type="text" placeholder="Coloque seu CPF" required>
                 </div>
                 <div class="input-box">
                     <span class="details">E-mail</span>
                     <input name="email"type="text" placeholder="Coloque seu e-mail" required>
                 </div>
                 <div class="input-box">
-                    <span class="details">CPF</span>
-                    <input name="cpf" type="text" placeholder="Coloque seu CPF" required>
-                </div>
+                    <span class="details">Confirmar e-mail</span>
+                    <input name="email2" type="text" placeholder="" required>
+            </div>
                 <div class="input-box">
                     <span class="details">Senha</span>
                     <input name="password" type="password" placeholder="Coloque sua senha" required>
                 </div>
                 <div class="input-box">
                     <span class="details">Confirmar senha</span>
-                    <input name="confirmar_senha" type="password" placeholder="Confirme sua senha" required>
+                    <input name="password2" type="password" placeholder="" required>
                 </div>
+            
             </div>
-             <div class="gender-details">
-                <input type="radio" name="genero" id="dot-1">
-                <input type="radio" name="genero" id="dot-2">
-                <input type="radio" name="genero" id="dot-3">
-                <span class="gender-title">Gênero</span>
-                <div class="category">
-                    <label for="dot-1">
-                        <span class="dot one">
-                        <span class="gender">Masculino</span>
-                        </span>
-                    </label>
-                    <label for="dot-2">
-                        <span class="dot two">
-                        <span class="gender">Feminino</span>
-                        </span>
-                    </label>
-                    <label for="dot-3">
-                        <span class="dot three">
-                        <span class="gender">Prefiro não dizer</span>
-                        </span>
-                    </label>
-                </div> 
-            </div>
-            <div class="button">
+            <div class="button" >
                 <input type="submit" value="Register">
             </div>
         </form>
     </div>
+
+    <script src="{{ url_for('static', filename='js/validate.js') }}"></script>
     
 </body>
 </html>

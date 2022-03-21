@@ -42,7 +42,7 @@ def login():
                 flash('senha incorreta', 'alert-danger')
                 return redirect(url_for('login'))
         else:
-            flash('nenhum usuario encontrado', 'alert-danger')
+            flash('Nenhum usuário foi encontrado', 'alert-danger')
             return redirect(url_for('login'))
     return render_template('login.html')
 
@@ -142,6 +142,35 @@ def deletar(id):
         db.session.delete(cvli)
         db.session.commit()
     return redirect(url_for('dashboard'))
+
+#  CRUD 2
+
+@app.route("/users")
+def users():
+    users = User.query.all()
+    return render_template("admin/usuarios.html", users=users)
+
+@app.route("/users/delete/<id>")
+def delete_user(id):
+    user = User.query.filter_by(id=id).first()
+    db.session.delete(user)
+    db.session.commit()
+    return redirect(url_for("users"))
+
+#  CRUD 3
+
+@app.route("/cvlis")
+def cvlis():
+    cvlis = Cvli.query.all()
+    return render_template("admin/cvlis.html", cvlis=cvlis)
+
+@app.route("/cvlis/delete/<id>")
+def delete_cvli(id):
+    cvlis = Cvli.query.filter_by(id=id).first()
+    db.session.delete(cvli)
+    db.session.commit()
+    return redirect(url_for("cvlis"))
+
 
 
 
